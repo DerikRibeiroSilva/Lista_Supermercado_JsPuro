@@ -8,12 +8,6 @@ document.querySelector('input[type=submit]').addEventListener('click',()=>{
         nome: nomeProduto,
         valor: precoProduto
     });
-    /*
-        div class="lista-produto-single">
-            <h3>Redbull</h3>
-            <h3 class="price-produto"><span>$20,00</span></h3>
-        </div>
-    */
     let listaProdutos = document.querySelector('.lista-produtos');
     let soma = 0;
     listaProdutos.innerHTML = "";
@@ -31,4 +25,10 @@ document.querySelector('input[type=submit]').addEventListener('click',()=>{
 
     let elementoSoma = document.querySelector('.soma-produto h1');
     elementoSoma.innerHTML = 'R$'+soma;
+});
+
+document.querySelector('button[name=limpar]').addEventListener('click',()=>{
+    items = [];
+    document.querySelector('.lista-produtos').innerHTML = "";
+    document.querySelector('.soma-produto h1').innerHTML = "R$0";
 });
